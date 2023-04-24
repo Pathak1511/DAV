@@ -1,0 +1,15 @@
+install.packages("forecast")
+library(forecast)
+png("forecast.png")
+plot(BJsales,main="Green without forecast",col.main="darkgreen")
+dev.off()
+
+png("forecastArima.png")
+fit<- auto.arima(BJsales)
+forecastVal<-forecast(fit,10)
+print(forecastVal)
+plot(forecastVal,main="Green with forecast",col.main="darkgreen")
+dev.off()
+
+pre<-predict(fit)
+print(pre)
