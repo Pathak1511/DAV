@@ -35,3 +35,10 @@ plt.title('Percentage and label')
 # show plot
 plt.show()
 
+#creating box plot
+data = [1,3,4,2,5,6,8,10]
+fig = plt.figure(figsize =(5, 5))
+plt.boxplot(data)
+# show plot
+plt.show()
+
